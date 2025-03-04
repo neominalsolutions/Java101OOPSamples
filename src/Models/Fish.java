@@ -1,6 +1,8 @@
 package Models;
 
-public class Fish  extends Animal {
+// implements keyword ile bir sınıf interface üzerinden bir yetenek alabiliyor.
+
+public class Fish  extends Animal implements Swimable {
 
     public Fish(String name) {
         super(name);
@@ -10,6 +12,13 @@ public class Fish  extends Animal {
     public void takeBreath() {
         System.out.println("Balık Solungaç solunumu yapar");
     }
+
+    @Override
+    public void swim() {
+        System.out.println("Denizin altında 5m de yüzerim");
+    }
+
+    // bir balığın yüzmesi ile bir kedinin suda yüzmesi farklı, polimorfik davranış
 }
 
 // Not: Polymophsim ise bir canlının bir özelliği farklı şekillerde uygulayabilme yeteneği.
